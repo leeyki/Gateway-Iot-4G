@@ -1,0 +1,32 @@
+
+# Build Zephyr
+build/
+cmake-build-*/
+out/
+
+# CMake
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# IDE
+.vscode/
+.idea/
+.emacs.desktop
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*~
+
+# OS
+.DS_Store

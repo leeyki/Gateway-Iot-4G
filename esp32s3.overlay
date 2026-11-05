@@ -1,0 +1,26 @@
+
+/{
+    aliases{
+        led-red = &led_red;
+        button-led = &button_led;
+    };
+
+    buttons {
+		compatible = "gpio-keys";
+        polling-mode;
+
+        button_led: gpio5 {
+            gpios = <&gpio0 5 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+			label = "LED Button";
+        };
+    };
+
+    leds {
+        compatible = "gpio-leds";
+
+        led_red: gpio6 {
+          gpios = <&gpio0 6 GPIO_ACTIVE_HIGH>;
+        };
+    };
+    
+};
