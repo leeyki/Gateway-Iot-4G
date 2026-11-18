@@ -24,3 +24,26 @@
     };
     
 };
+
+&uart1 {
+    status = "okay";
+    current-speed = <115200>;
+
+    pinctrl-0 = <&uart1_default>;
+    pinctrl-names = "default";
+};
+
+
+&pinctrl {
+    uart1_default: uart1_default {
+        group1 {
+            pinmux = <UART1_TX_GPIO17>;
+            output-high;
+        };
+
+        group2 {
+            pinmux = <UART1_RX_GPIO18>;
+            bias-pull-up;
+        };
+    };
+};

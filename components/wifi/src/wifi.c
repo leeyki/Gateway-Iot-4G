@@ -5,8 +5,7 @@
 #include "zephyr/net/wifi.h"
 #include "zephyr/sys/util_macro.h"
 
-
-LOG_MODULE_REGISTER(MAIN);
+LOG_MODULE_REGISTER(WIFI);
 
 #define MACSTR "%02X:%02X:%02X:%02X:%02X:%02X"
 
@@ -257,9 +256,9 @@ void wifi_task(void *p1, void *p2, void *p3)
 
     wifi_connection();
     wifi_hotspot_enable();
-    wifi_hotspot_disable();
 
     k_sleep(K_SECONDS(30));
+    wifi_set_power_mode(0);
     wifi_disconnection();
 
     while (1) {
