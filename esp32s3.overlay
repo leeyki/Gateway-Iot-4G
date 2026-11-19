@@ -38,7 +38,7 @@
     uart1_default: uart1_default {
         group1 {
             pinmux = <UART1_TX_GPIO17>;
-            output-high;
+            bias-pull-up;
         };
 
         group2 {
